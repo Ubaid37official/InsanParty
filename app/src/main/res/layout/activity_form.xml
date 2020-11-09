@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+     <TextView  android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:text="Insan Party"
+         android:textColor="#041785"
+         android:textSize="30sp"
+         android:textStyle="bold"/>
+
+        <TextView  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Membership Form"
+            android:textColor="#041785"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address*"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_margin="10dp"
+        />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/fatherName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Father's Name*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CNIC Number*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="number"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone or Whatsapp*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="number"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/socialLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Social Media Link*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Date of Birth*"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+        <DatePicker android:id="@+id/dateBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth*"
+            android:textColorHint="#C6BFBF"
+            android:textColor="#B6B2B2"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            />
+
+<!--        <EditText-->
+<!--            android:id="@+id/dateBirth"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Date of Birth*"-->
+<!--            android:textColorHint="#000000"-->
+<!--            android:textColor="#000000"-->
+<!--            android:inputType="text"-->
+<!--            android:ems="10"-->
+<!--            android:layout_margin="10dp"-->
+<!--            />-->
+        <EditText
+            android:id="@+id/qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Qualification*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City and Country*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/constituencyNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Constituency Number*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/politicalBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Political Background*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/yourPassion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Passion*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/yourAbilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Abilities*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+<!--        <EditText-->
+<!--            android:id="@+id/interestPolitics"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Interest in Politics"-->
+<!--            android:textColorHint="#000000"-->
+<!--            android:textColor="#000000"-->
+<!--            android:inputType="text"-->
+<!--            android:ems="10"-->
+<!--            android:layout_margin="10dp"-->
+<!--            />-->
+
+        <Spinner
+            android:layout_margin="10dp"
+            android:id="@+id/interestPolitics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <Spinner
+            android:layout_margin="10dp"
+            android:id="@+id/shadowPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+
+        <EditText
+            android:id="@+id/changePakistan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Change in Pakistan*"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How many hours will you work to see the change you want in Pakistan? *"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/daily2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hrs daily"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/weekly2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hrs weekly"
+                 />
+            <RadioButton
+                android:id="@+id/monthly2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hrs monthly"
+                 />
+            <RadioButton
+                android:id="@+id/never"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I don't have time"
+                 />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Will you perform the tasks given to you by the Party Leadership? *"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I will abide by the Insan Party Bylaws.*"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+        <CheckBox
+            android:id="@+id/abideYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            />
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_margin="10dp"
+            android:text="REGISTER"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
