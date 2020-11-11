@@ -25,8 +25,25 @@
         <activity android:name="rehanfoundation.app.insanparty.MainActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name="rehanfoundation.app.insanparty.MemberActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.UserActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.UserLoginActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.MemberLoginActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.MemberMenuActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name="rehanfoundation.app.insanparty.RegisterationForm"
             android:screenOrientation="portrait"/>
+
+
 
 
 

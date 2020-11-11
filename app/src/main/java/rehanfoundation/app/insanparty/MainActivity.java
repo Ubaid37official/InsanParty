@@ -9,51 +9,32 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-    Button fbPage,fbgroup,form,regForm;
+    Button user,member;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     fbPage = (Button)findViewById(R.id.fbpage);
-     fbgroup = (Button)findViewById(R.id.fbgroup);
-     form = (Button)findViewById(R.id.form);
-     regForm = (Button)findViewById(R.id.regForm);
+     user = (Button)findViewById(R.id.user);
+     member = (Button)findViewById(R.id.member);
 
-       regForm .setOnClickListener(new View.OnClickListener() {
+
+       member .setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(getApplicationContext(), RegisterationForm.class);
+               Intent intent = new Intent(getApplicationContext(), MemberActivity.class);
                startActivity(intent);
            }
        });
-     fbPage.setOnClickListener(new View.OnClickListener() {
+     user.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
 
-             Intent intent = new Intent(Intent.ACTION_VIEW,
-                     Uri.parse("https://www.facebook.com/InsanDotPk/"));
+             Intent intent = new Intent(getApplicationContext(), UserActivity.class);
              startActivity(intent);
 
          }
      });
-     fbgroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://www.facebook.com/groups/insancandidate/"));
-                startActivity(intent);
-            }
-        });
-
-     form.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://insan.pk/Register/"));
-                startActivity(intent);
-            }
-     });
 
     }
 

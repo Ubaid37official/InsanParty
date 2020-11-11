@@ -3,27 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#ffffff">
+    android:background="#326334">
 
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:src="@drawable/insanlogo"
         android:layout_centerHorizontal="true"/>
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="INSAN PARTY"
-      android:textSize="40sp"
-      android:textStyle="bold"
-      android:textColor="#041785"
-      android:layout_centerHorizontal="true"
-      android:layout_below="@id/logo"
+<!--    <View-->
+<!--        android:id="@+id/line"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:background="#C5D6B2"-->
+<!--        android:layout_below="@id/logo"-->
+<!--        android:layout_centerHorizontal="true">-->
 
-      />
+<!--  <TextView-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:text="Peace and Prosperitty for All"-->
+<!--      android:textSize="20sp"-->
+<!--      android:textColor="#FFFFFF"-->
+<!--      android:layout_centerHorizontal="true"-->
+<!--      android:layout_below="@id/line"-->
+
+<!--      />-->
 
 
 
