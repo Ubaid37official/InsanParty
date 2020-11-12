@@ -29,7 +29,8 @@ public class MemberActivity extends Activity {
         memberRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(),MemberRegisterActivity.class);
+                startActivity(intent);
             }
         });
 

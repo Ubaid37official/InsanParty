@@ -29,4 +29,33 @@
         <item>Shadow Senator</item>
         <item>Shadow Chairman Senate</item>
     </string-array>
+    <string-array name="interestPolitics2">
+        <item>Select option</item>
+        <item>Member</item>
+        <item>Worker</item>
+        <item>Chairman MC Candidate</item>
+        <item>Local Bodies Candidate</item>
+        <item>MPA Candidate</item>
+        <item>CM Candidate</item>
+        <item>MNA Candidate</item>
+        <item>Speaker National Assembly Candidate</item>
+        <item>Prime Minister Candidate</item>
+        <item>Presidential Candidate</item>
+        <item>Senator Candidate</item>
+        <item>Chairman Senate Candidate</item>
+    </string-array>
+
+    <string-array name="shadowPosition2">
+        <item>Select option</item>
+        <item>Shadow Councillor</item>
+        <item>Shadow Chairman</item>
+        <item>Shadow MPA</item>
+        <item>Shadow CM</item>
+        <item>Shadow MNA</item>
+        <item>Shadow Speaker National Assembly</item>
+        <item>Shadow Prime Minister</item>
+        <item>Shadow President</item>
+        <item>Shadow Senator</item>
+        <item>Shadow Chairman Senate</item>
+    </string-array>
 </resources>

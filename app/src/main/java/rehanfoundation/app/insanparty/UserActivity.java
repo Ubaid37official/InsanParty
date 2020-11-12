@@ -31,7 +31,8 @@ public class UserActivity extends Activity {
         userRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(),UserRegisterActivity.class);
+                startActivity(intent);
             }
         });
 

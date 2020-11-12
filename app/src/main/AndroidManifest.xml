@@ -19,7 +19,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <activity android:name="rehanfoundation.app.insanparty.MainActivity"
@@ -29,6 +28,12 @@
             android:screenOrientation="portrait"/>
 
         <activity android:name="rehanfoundation.app.insanparty.UserActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.MemberRegisterActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="rehanfoundation.app.insanparty.UserRegisterActivity"
             android:screenOrientation="portrait"/>
 
         <activity android:name="rehanfoundation.app.insanparty.UserLoginActivity"

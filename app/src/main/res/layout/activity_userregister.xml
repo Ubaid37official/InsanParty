@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#326334"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@drawable/insanlogo"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Create User Account"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone or Whatsapp*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="number"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select Date of Birth*"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_margin="10dp"/>-->
+
+<!--        <DatePicker android:id="@+id/dateBirth"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Date of Birth*"-->
+<!--            android:textColorHint="#ffffff"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:inputType="text"-->
+<!--            android:ems="10"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:datePickerMode="spinner"-->
+<!--            android:calendarViewShown="false"-->
+<!--            />-->
+
+
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender*"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:checked="true"
+                android:textColor="#ffffff"/>
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F"
+                android:textColor="#ffffff"
+                />
+
+        </RadioGroup>
+        <EditText
+            android:id="@+id/education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Education*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+
+        <EditText
+            android:id="@+id/profession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profession*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location*"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:ems="10"
+            android:layout_margin="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundbutton"
+            android:layout_margin="10dp"
+            android:text="Create Account"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
