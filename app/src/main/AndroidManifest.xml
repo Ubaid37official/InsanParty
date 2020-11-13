@@ -39,6 +39,9 @@
         <activity android:name="rehanfoundation.app.insanparty.UserLoginActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name="rehanfoundation.app.insanparty.UserHomeActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name="rehanfoundation.app.insanparty.MemberLoginActivity"
             android:screenOrientation="portrait"/>
 
