@@ -4,43 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#326334"
-
     android:gravity="center"
     >
+
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:src="@drawable/insanlogo"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:id="@+id/memberRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Create your account"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        />
-
-    <View
-        android:layout_width="140dp"
-        android:layout_height="2dp"
-        android:background="#FFFFFF"
-        android:layout_margin="5dp"
-        />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_member_white" />
 
     <TextView
         android:id="@+id/memberLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Log In"
+        android:text="Sign-in as Member"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/memberRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Or create your account"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        />
+
+
 
 
 

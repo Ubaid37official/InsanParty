@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#326334"
+    android:background="#ffffff"
    >
 
     <LinearLayout
@@ -16,16 +16,17 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:src="@drawable/insanlogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_adduser"
             android:layout_centerHorizontal="true"/>
 
-        <TextView  android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_margin="20dp"
             android:text="Create Member Account"
-            android:textColor="#FFFFFF"
+            android:textColor="#326334"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
@@ -35,8 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Address*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:layout_margin="10dp"
@@ -47,8 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="textPassword"
             android:ems="10"
             android:layout_margin="10dp"
@@ -59,8 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -71,8 +72,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Father's Name*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -83,8 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="CNIC Number*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="number"
             android:ems="10"
             android:layout_margin="10dp"
@@ -95,8 +96,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone or Whatsapp*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="number"
             android:ems="10"
             android:layout_margin="10dp"
@@ -107,8 +108,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Social Media Link*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -118,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Date of Birth*"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -126,8 +127,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Date of Birth*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -151,8 +152,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Qualification*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -163,8 +164,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="City and Country*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -175,8 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Address*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -187,8 +188,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Constituency Number*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -199,8 +200,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Political Background*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -211,8 +212,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your Passion*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -223,8 +224,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your Abilities*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -235,7 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Interest in Politics*"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
         <Spinner
@@ -243,14 +244,14 @@
             android:id="@+id/interestPolitics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Shadow Cabinet Position*"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -259,7 +260,7 @@
             android:id="@+id/shadowPosition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             />
 
 
@@ -269,8 +270,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Change in Pakistan*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -280,7 +281,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="How many hours will you work to see the change you want in Pakistan? *"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -295,27 +296,27 @@
                 android:layout_height="wrap_content"
                 android:text="2 hrs daily"
                 android:checked="true"
-                android:textColor="#ffffff"/>
+                android:textColor="#000000"/>
             <RadioButton
                 android:id="@+id/weekly2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2 hrs weekly"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 />
             <RadioButton
                 android:id="@+id/monthly2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2 hrs monthly"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 />
             <RadioButton
                 android:id="@+id/never"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="I don't have time"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 />
 
         </RadioGroup>
@@ -324,7 +325,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Will you perform the tasks given to you by the Party Leadership? *"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -339,13 +340,13 @@
                 android:layout_height="wrap_content"
                 android:text="Yes"
                 android:checked="true"
-                android:textColor="#ffffff"/>
+                android:textColor="#000000"/>
             <RadioButton
                 android:id="@+id/no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 />
 
         </RadioGroup>
@@ -354,7 +355,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="I will abide by the Insan Party Bylaws.*"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -363,7 +364,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Yes"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             />
 
 

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#326334"
+    android:background="#ffffff"
     android:gravity="center"
     >
 
@@ -11,8 +11,18 @@
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:src="@drawable/insanlogo"
+        android:src="@drawable/ic_user_green"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="User Login"
+        android:textSize="30sp"
+        android:textColor="#326334"
+        android:textStyle="bold"
+        />
 
     <EditText
         android:id="@+id/email"
@@ -20,9 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Enter your email address"
-        android:textColorHint="#ffffff"
+        android:textColorHint="#63000000"
         android:textSize="15sp"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"/>
 
     <EditText
         android:id="@+id/password"
@@ -30,9 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Enter your password"
-        android:textColorHint="#ffffff"
+        android:textColorHint="#63000000"
         android:textSize="15sp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="10dp"/>
 
     <Button
         android:id="@+id/login"
@@ -44,39 +58,23 @@
         android:textSize="18sp"
         android:background="@drawable/roundbutton"/>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/logo"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="200dp"-->
-<!--        android:src="@drawable/insanlogo"-->
-<!--        android:layout_centerHorizontal="true"/>-->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Forgot Password ?"
+        android:textSize="20sp"
+        android:textColor="#326334"
+        />
 
-<!--    <TextView-->
-<!--        android:id="@+id/userRegister"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:text="Create Account"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:textSize="20sp"-->
-<!--        />-->
 
-<!--    <View-->
-<!--        android:layout_width="120dp"-->
-<!--        android:layout_height="2dp"-->
-<!--        android:background="#FFFFFF"-->
-<!--        android:layout_margin="5dp"-->
-<!--        />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/userLogin"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:text="Log In"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:textSize="20sp"-->
-<!--        />-->
+
+
+
+
+
 
 
 

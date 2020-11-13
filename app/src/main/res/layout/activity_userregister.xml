@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#326334"
+    android:background="#ffffff"
     >
 
     <LinearLayout
@@ -16,16 +16,16 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:src="@drawable/insanlogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_adduser"
             android:layout_centerHorizontal="true"/>
 
         <TextView  android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_margin="20dp"
             android:text="Create User Account"
-            android:textColor="#FFFFFF"
+            android:textColor="#326334"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
@@ -35,8 +35,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -48,8 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Address*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -61,8 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="textPassword"
             android:ems="10"
             android:layout_margin="10dp"
@@ -75,8 +75,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone or Whatsapp*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="number"
             android:ems="10"
             android:layout_margin="10dp"
@@ -112,8 +112,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Age*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -123,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gender*"
-            android:textColor="#ffffff"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -138,13 +138,13 @@
                 android:layout_height="wrap_content"
                 android:text="M"
                 android:checked="true"
-                android:textColor="#ffffff"/>
+                android:textColor="#000000"/>
             <RadioButton
                 android:id="@+id/female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="F"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
                 />
 
         </RadioGroup>
@@ -153,8 +153,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Education*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -167,8 +167,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Profession*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -179,8 +179,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Location*"
-            android:textColorHint="#ffffff"
-            android:textColor="#ffffff"
+            android:textColorHint="#63000000"
+            android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"

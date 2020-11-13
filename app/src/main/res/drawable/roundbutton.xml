@@ -3,11 +3,11 @@
     android:shape="rectangle">
     <solid android:color="#326334"/>
     <corners android:bottomRightRadius="70dp"
-        android:bottomLeftRadius="70dp"
-        android:topRightRadius="70dp"
+        android:bottomLeftRadius="10dp"
+        android:topRightRadius="10dp"
         android:topLeftRadius="70dp" />
     <stroke
         android:width="1dp"
-        android:color="#FFFFFF"
+        android:color="#ffffff"
         />
 </shape>
