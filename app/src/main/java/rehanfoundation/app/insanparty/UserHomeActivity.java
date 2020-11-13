@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class UserHomeActivity extends Activity {
 
     private TextView name,location,gender,age,education,profession,currentLocation,shadowMinister;
-    private Button registerComplain;
+    private Button registerComplain,aboutArea;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class UserHomeActivity extends Activity {
         currentLocation = (TextView)findViewById(R.id.currentLocation);
         shadowMinister = (TextView)findViewById(R.id.shadowMinister);
         registerComplain = (Button)findViewById(R.id.registerComplain);
+        aboutArea = (Button)findViewById(R.id.aboutArea);
 
     }
 }
