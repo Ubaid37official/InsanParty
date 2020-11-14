@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+
+import rehanfoundation.app.insanparty.R;
 
 public class UserHomeActivity extends Activity {
 

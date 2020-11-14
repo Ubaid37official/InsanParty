@@ -29,10 +29,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter your email address"
+        android:hint="Enter your email or phone number"
         android:textColorHint="#63000000"
         android:textSize="15sp"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:drawableLeft="@drawable/ic_email"
         android:drawablePadding="10dp"/>
 

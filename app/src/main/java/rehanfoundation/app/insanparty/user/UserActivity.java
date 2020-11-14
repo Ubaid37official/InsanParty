@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+
+import rehanfoundation.app.insanparty.R;
 
 public class UserActivity extends Activity {
 
@@ -23,7 +25,7 @@ public class UserActivity extends Activity {
         userLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),UserLoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), UserLoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +33,7 @@ public class UserActivity extends Activity {
         userRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),UserRegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), UserRegisterActivity.class);
                 startActivity(intent);
             }
         });

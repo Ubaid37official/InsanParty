@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
+
+import rehanfoundation.app.insanparty.R;
 
 public class UserRegisterActivity extends Activity {
 

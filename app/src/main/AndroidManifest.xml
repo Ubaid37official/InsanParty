@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
 
         <activity android:name="rehanfoundation.app.insanparty.SplashActivity"
             tools:ignore="MissingClass"
@@ -24,28 +25,28 @@
         <activity android:name="rehanfoundation.app.insanparty.MainActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.MemberActivity"
+        <activity android:name="rehanfoundation.app.insanparty.member.MemberActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.UserActivity"
+        <activity android:name="rehanfoundation.app.insanparty.user.UserActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.MemberRegisterActivity"
+        <activity android:name="rehanfoundation.app.insanparty.member.MemberRegisterActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.UserRegisterActivity"
+        <activity android:name="rehanfoundation.app.insanparty.user.UserRegisterActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.UserLoginActivity"
+        <activity android:name="rehanfoundation.app.insanparty.user.UserLoginActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.UserHomeActivity"
+        <activity android:name="rehanfoundation.app.insanparty.user.UserHomeActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.MemberLoginActivity"
+        <activity android:name="rehanfoundation.app.insanparty.member.MemberLoginActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="rehanfoundation.app.insanparty.MemberMenuActivity"
+        <activity android:name="rehanfoundation.app.insanparty.member.MemberMenuActivity"
             android:screenOrientation="portrait"/>
 
         <activity android:name="rehanfoundation.app.insanparty.RegisterationForm"
