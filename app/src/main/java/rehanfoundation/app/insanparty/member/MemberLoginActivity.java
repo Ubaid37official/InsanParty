@@ -34,8 +34,14 @@ public class MemberLoginActivity extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), UserHomeActivity.class);
+                final String Email = email.getText().toString();
+                final String Password = password.getText().toString();
+
+                Intent intent = new Intent(getApplicationContext(),MemberHomeActivity.class);
                 startActivity(intent);
+
+
+
             }
         });
 
