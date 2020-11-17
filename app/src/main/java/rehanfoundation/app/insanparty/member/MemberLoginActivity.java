@@ -7,11 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.model.LoginResponse;
+import rehanfoundation.app.insanparty.model.Member;
+import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
 import rehanfoundation.app.insanparty.user.UserHomeActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MemberLoginActivity extends Activity {
 
@@ -34,16 +41,53 @@ public class MemberLoginActivity extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String Email = email.getText().toString();
-                final String Password = password.getText().toString();
 
-                Intent intent = new Intent(getApplicationContext(),MemberHomeActivity.class);
-                startActivity(intent);
-
+                validateInputs();
 
 
             }
         });
 
     }
+
+    private void validateInputs(){
+        final String Email = email.getText().toString().trim();
+        final String Password = password.getText().toString().trim();
+
+
+        if(Email.isEmpty()){
+            email.setError("Email is Required");
+            email.requestFocus();
+            return;
+        }
+        if(Password.isEmpty()){
+            password.setError("Password is Required");
+            password.requestFocus();
+            return;
+        }
+
+        Call<Member> call = RetrofitClient.getInstance().getApi().memberLogin(Email,Password);
+
+        call.enqueue(new Callback<Member>() {
+            @Override
+            public void onResponse(Call<Member> call, Response<Member> response) {
+                Member member = response.body();
+                if (member.isStatus()==true){
+                    Toast.makeText(getApplicationContext(),"Logged In",Toast.LENGTH_LONG).show();
+
+                }else{
+                    Toast.makeText(getApplicationContext(),member.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Member> call, Throwable t) {
+
+            }
+        });
+    }
+
+
+
+
 }

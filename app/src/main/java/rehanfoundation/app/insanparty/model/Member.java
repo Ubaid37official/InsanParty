@@ -1,17 +1,13 @@
 package rehanfoundation.app.insanparty.model;
 
-public class LoginResponse {
+public class Member {
 
     private boolean status;
     private String message;
-    private User user;
 
-
-    public LoginResponse(boolean status, String message, User user) {
+    public Member(boolean status, String message) {
         this.status = status;
         this.message = message;
-        this.user = user;
-
     }
 
     public boolean isStatus() {
@@ -21,10 +17,4 @@ public class LoginResponse {
     public String getMessage() {
         return message;
     }
-
-    public User getUser() {
-        return user;
-    }
-
-
 }

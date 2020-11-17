@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import rehanfoundation.app.insanparty.R;
 import rehanfoundation.app.insanparty.model.LoginResponse;
+import rehanfoundation.app.insanparty.model.User;
 import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -62,21 +63,25 @@ public class UserLoginActivity extends Activity {
             return;
         }
 
-        Call<LoginResponse> call = RetrofitClient.getInstance().getApi().userLogin(Email,Password);
+        Call<User> call = RetrofitClient.getInstance().getApi().userLogin(Email,Password);
 
-        call.enqueue(new Callback<LoginResponse>() {
+        call.enqueue(new Callback<User>() {
             @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                LoginResponse loginResponse = response.body();
-                if (loginResponse.isStatus()==true){
+            public void onResponse(Call<User> call, Response<User> response) {
+                User user = response.body();
+                if (user.isStatus()==true){
                     Toast.makeText(getApplicationContext(),"Logged In",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),user.getUser_id(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),user.getEducation(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),user.getLocation(),Toast.LENGTH_LONG).show();
+
                 }else{
-                    Toast.makeText(getApplicationContext(),loginResponse.getMessage(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),user.getMessage(),Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
+            public void onFailure(Call<User> call, Throwable t) {
 
             }
         });
