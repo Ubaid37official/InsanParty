@@ -2,17 +2,25 @@ package rehanfoundation.app.insanparty.member;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
+
+import java.io.IOException;
 
 import rehanfoundation.app.insanparty.R;
 
@@ -23,9 +31,14 @@ public class MemberRegisterActivity extends Activity {
     private RadioGroup workTime,task;
     private CheckBox abideLaw;
     private ProgressDialog progressDialog;
-    private Button register;
+    private Button register,upload;
     private RadioButton Worktime,Task;
     private DatePicker birthDate;
+    private ImageView image;
+    private static final int PICK_IMAGE = 1;
+    Uri imageUri;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,5 +84,44 @@ public class MemberRegisterActivity extends Activity {
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.shadowPosition2, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         shadowPosition.setAdapter(adapter2);
+
+        upload = (Button)findViewById(R.id.upload);
+        // Image Views
+
+        image = (ImageView)findViewById(R.id.image);
+
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gallery = new Intent();
+                gallery.setType("image/*");
+                gallery.setAction(Intent.ACTION_GET_CONTENT);
+
+                startActivityForResult(Intent.createChooser(gallery,"Select Picture"),PICK_IMAGE);
+            }
+        });
+
+
+
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==PICK_IMAGE &&  resultCode==RESULT_OK && data!=null){
+            imageUri = data.getData();
+
+            try{
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
+                image.setImageBitmap(bitmap);
+
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
+
+
+    }
+
+
 }

@@ -14,12 +14,6 @@
         android:gravity="center"
         android:layout_marginBottom="10dp">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_adduser"
-            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,6 +23,22 @@
             android:textColor="#326334"
             android:textSize="20sp"
             android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_adduser"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            android:text="Select Image"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"/>
 
 
         <EditText

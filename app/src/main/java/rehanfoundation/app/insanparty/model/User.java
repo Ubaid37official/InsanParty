@@ -1,10 +1,10 @@
 package rehanfoundation.app.insanparty.model;
 
-public class ApiUserResponse {
+public class User {
     private int id,user_id;
     private String name, email,phone, gender,dob,education,profession,location;
 
-    public ApiUserResponse(int id,int user_id,String name,String email,String phone,String gender,String dob, String education,String profession,String location){
+    public User(int id, int user_id, String name, String email, String phone, String gender, String dob, String education, String profession, String location){
         this.id = id;
         this.user_id =user_id;
         this.name = name;
