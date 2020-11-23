@@ -1,5 +1,7 @@
 package rehanfoundation.app.insanparty.model;
 
+import rehanfoundation.app.insanparty.model.login.User;
+
 public class LoginResponse {
 
     private boolean status;

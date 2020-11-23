@@ -1,9 +1,7 @@
 package rehanfoundation.app.insanparty.retrofitUtil;
 
-import okhttp3.ResponseBody;
-import rehanfoundation.app.insanparty.model.LoginResponse;
 import rehanfoundation.app.insanparty.model.Member;
-import rehanfoundation.app.insanparty.model.User;
+import rehanfoundation.app.insanparty.model.login.User;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;

@@ -1,12 +1,15 @@
 package rehanfoundation.app.insanparty.member;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,12 +20,24 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MemberRegisterActivity extends Activity {
 
@@ -30,14 +45,17 @@ public class MemberRegisterActivity extends Activity {
     private Spinner interestPolitics, shadowPosition;
     private RadioGroup workTime,task;
     private CheckBox abideLaw;
-    private ProgressDialog progressDialog;
     private Button register,upload;
     private RadioButton Worktime,Task;
-    private DatePicker birthDate;
+    RadioButton daily2, weekly2, monthly2, never;
+    RadioButton no, yes;
+    String work, task_political, abideYes;
+    private TextView dateBirth;
     private ImageView image;
-    private static final int PICK_IMAGE = 1;
+    final Calendar myCalendar = Calendar.getInstance();
     Uri imageUri;
-
+    String imageString;
+    private ProgressDialog dialog;
 
 
     @Override
@@ -45,7 +63,16 @@ public class MemberRegisterActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memberregister);
 
-        progressDialog = new ProgressDialog(this);
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Please wait...");
+        dialog.setCancelable(false);
+
+        never = findViewById(R.id.never);
+        monthly2 = findViewById(R.id.monthly2);
+        weekly2 = findViewById(R.id.weekly2);
+        daily2 = findViewById(R.id.daily2);
+        yes = findViewById(R.id.yes);
+        no = findViewById(R.id.no);
         //Edit Texts
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);
@@ -54,7 +81,7 @@ public class MemberRegisterActivity extends Activity {
         cnic = (EditText)findViewById(R.id.cnic);
         phone = (EditText)findViewById(R.id.phone);
         socialLink = (EditText)findViewById(R.id.socialLink);
-        birthDate = (DatePicker) findViewById(R.id.dateBirth);
+        dateBirth = findViewById(R.id.dateBirth);
         qualification = (EditText)findViewById(R.id.qualification);
         city = (EditText)findViewById(R.id.city);
         address = (EditText)findViewById(R.id.address);
@@ -75,8 +102,6 @@ public class MemberRegisterActivity extends Activity {
         //Button
         register = (Button)findViewById(R.id.register);
 
-
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.interestPolitics2, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         interestPolitics.setAdapter(adapter);
@@ -90,37 +115,121 @@ public class MemberRegisterActivity extends Activity {
 
         image = (ImageView)findViewById(R.id.image);
 
-        upload.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gallery = new Intent();
-                gallery.setType("image/*");
-                gallery.setAction(Intent.ACTION_GET_CONTENT);
+                if (daily2.isChecked()){
+                    work = "2 hr daily";
+                }else if (never.isChecked()){
+                    work = "never";
+                }else if (monthly2.isChecked()){
+                    work = "2 hr monthly";
+                }else if (weekly2.isChecked()){
+                    work = "2 hr weekly";
+                }
 
-                startActivityForResult(Intent.createChooser(gallery,"Select Picture"),PICK_IMAGE);
+
+                if (yes.isChecked()){
+                    task_political = "yes";
+                }else if (no.isChecked()){
+                    task_political = "no";
+                }
+
+
+                if (abideLaw.isChecked()){
+                    abideYes = "yes";
+                }else {
+                    abideYes = "no";
+                }
+
+                postData();
+//                Toast.makeText(MemberRegisterActivity.this, ""+work, Toast.LENGTH_SHORT).show();
             }
         });
 
 
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+//                updateLabel();
+                String myFormat = "dd-MM-yyyy"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                dateBirth.setText(sdf.format(myCalendar.getTime()));
+            }
+
+        };
+
+        dateBirth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(MemberRegisterActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
 
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==PICK_IMAGE &&  resultCode==RESULT_OK && data!=null){
-            imageUri = data.getData();
 
-            try{
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
-                image.setImageBitmap(bitmap);
+    private void postData(){
+        dialog.show();
+        RetroServices service = RetrofitClientInstance.getApiClient().create(RetroServices.class);
+        Call<MDMemberLogin> call = service.memberRegister(name.getText().toString(),
+                email.getText().toString(),
+                password.getText().toString(),
+                fatheName.getText().toString(),
+                cnic.getText().toString(),
+                phone.getText().toString(),
+                socialLink.getText().toString(),
+                dateBirth.getText().toString(),
+                qualification.getText().toString(),
+                city.getText().toString(),
+                address.getText().toString(),
+                constituency.getText().toString(),
+                interestPolitics.getSelectedItem().toString(),
+                shadowPosition.getSelectedItem().toString(),
+                work,
+                task_political,
+                abideYes,
+                politicalBackground.getText().toString(),
+                passion.getText().toString(),
+                abilities.getText().toString(),
+                changePakistan.getText().toString()
+                );
+        call.enqueue(new Callback<MDMemberLogin>() {
 
-            }catch (IOException e){
-                e.printStackTrace();
+            @Override
+            public void onResponse(Call<MDMemberLogin> call, Response<MDMemberLogin> response) {
+                if (response.isSuccessful()){
+                    MDMemberLogin mdRegister = response.body();
+                    boolean status = mdRegister.getStatus();
+                    String message = mdRegister.getMessage();
+
+                    dialog.dismiss();
+
+                    if (status == true){
+                        startActivity(new Intent(MemberRegisterActivity.this, MemberHomeActivity.class));
+                    }
+                    if (status == false){
+                        Toast.makeText(MemberRegisterActivity.this, ""+ message, Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
-        }
 
-
-
+            @Override
+            public void onFailure(Call<MDMemberLogin> call, Throwable t) {
+//                Toast.makeText(LoginActivity.this, "Fail", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                Log.e("exception", t.toString());
+            }
+        });
     }
 
 
