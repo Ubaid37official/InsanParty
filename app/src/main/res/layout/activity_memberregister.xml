@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-   >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,22 +46,27 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Email Address*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:layout_margin="10dp"
-            />
+            android:layout_margin="10dp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Password*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="textPassword"
             android:ems="10"
             android:layout_margin="10dp"
@@ -70,10 +75,13 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Full Name*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -82,8 +90,11 @@
         <EditText
             android:id="@+id/fatherName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Father's Name*"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:textColorHint="#63000000"
             android:textColor="#000000"
             android:inputType="text"
@@ -94,9 +105,12 @@
         <EditText
             android:id="@+id/cnic"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="CNIC Number*"
             android:textColorHint="#63000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:textColor="#000000"
             android:inputType="number"
             android:ems="10"
@@ -106,9 +120,12 @@
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Phone or Whatsapp*"
             android:textColorHint="#63000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:textColor="#000000"
             android:inputType="number"
             android:ems="10"
@@ -118,8 +135,11 @@
         <EditText
             android:id="@+id/socialLink"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Social Media Link*"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:textColorHint="#63000000"
             android:textColor="#000000"
             android:inputType="text"
@@ -127,33 +147,38 @@
             android:layout_margin="10dp"
             />
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Select Date of Birth*"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:layout_margin="10dp"/>
+            android:layout_height="40dp"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/register_field_shape"
+            android:layout_margin="10dp">
 
-        <TextView
-            android:id="@+id/dateBirth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tap here to select date"
-            android:textColor="#000000"
-            android:ems="10"
-            android:layout_margin="10dp"
-            />
+            <TextView
+                android:id="@+id/dateBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Date Of Birth"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true" />
 
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:textColor="#000000"
-            android:ems="10"
-            android:layout_margin="10dp"
-            />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/calander"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
 
         <!--        <EditText-->
         <!--            android:id="@+id/dateBirth"-->
@@ -169,10 +194,13 @@
         <EditText
             android:id="@+id/qualification"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Qualification*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -181,10 +209,13 @@
         <EditText
             android:id="@+id/city"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="City and Country*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -193,10 +224,13 @@
         <EditText
             android:id="@+id/address"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Address*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -205,10 +239,13 @@
         <EditText
             android:id="@+id/constituencyNo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Constituency Number*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -217,22 +254,28 @@
         <EditText
             android:id="@+id/politicalBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Political Background*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
             android:inputType="text"
             android:ems="10"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:layout_margin="10dp"
             />
 
         <EditText
             android:id="@+id/yourPassion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Your Passion*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -241,10 +284,13 @@
         <EditText
             android:id="@+id/yourAbilities"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Your Abilities*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"
@@ -255,7 +301,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Interest in Politics*"
-            android:textColor="#000000"
+            android:textColor="#63000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
         <Spinner
@@ -270,7 +316,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Shadow Cabinet Position*"
-            android:textColor="#000000"
+            android:textColor="#63000000"
             android:textSize="18sp"
             android:layout_margin="10dp"/>
 
@@ -279,18 +325,20 @@
             android:id="@+id/shadowPosition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
-            />
+            android:textColor="#000000" />
 
 
 
         <EditText
             android:id="@+id/changePakistan"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:hint="Change in Pakistan*"
             android:textColorHint="#63000000"
             android:textColor="#000000"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/register_field_shape"
             android:inputType="text"
             android:ems="10"
             android:layout_margin="10dp"

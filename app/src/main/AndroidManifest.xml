@@ -1,68 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="rehanfoundation.app.insanparty">
+    package="insan.app.insanparty">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:hardwareAccelerated="true"
         android:usesCleartextTraffic="true">
-
-        <activity android:name="rehanfoundation.app.insanparty.SplashActivity"
-            tools:ignore="MissingClass"
-            android:screenOrientation="portrait">
-            <intent-filter >
+        <activity android:name=".MyActivity"></activity>
+        <activity android:name=".MemberListProfileActivity" />
+        <activity android:name=".MemberListActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="MissingClass">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="rehanfoundation.app.insanparty.MainActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.member.MemberActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.user.UserActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.member.MemberRegisterActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.user.UserRegisterActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.user.UserLoginActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.user.UserHomeActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.member.MemberLoginActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.member.MemberHomeActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.member.MemberMenuActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name="rehanfoundation.app.insanparty.RegisterationForm"
-            android:screenOrientation="portrait"/>
-
-
-
-
-
-</application>
-
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.UserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.UserRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.UserLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".user.UserHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".member.MemberMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterationForm"
+            android:screenOrientation="portrait" />
+    </application>
 
 </manifest>

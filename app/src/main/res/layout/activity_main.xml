@@ -12,6 +12,7 @@
         android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="200dp"
+        android:padding="50dp"
         android:src="@drawable/insanlogo"
         android:layout_centerHorizontal="true"/>
 
