@@ -1,4 +1,4 @@
-package insan.app.insanparty.retrofitUtil;
+package rehanfoundation.app.insanparty.retrofitUtil;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

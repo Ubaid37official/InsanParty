@@ -1,4 +1,4 @@
-package insan.app.insanparty.model;
+package rehanfoundation.app.insanparty.model;
 
 public class Member {
 

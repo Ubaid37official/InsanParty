@@ -1,13 +1,14 @@
-package insan.app.insanparty.user;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import insan.app.insanparty.R;
+import rehanfoundation.app.insanparty.R;
 
 public class UserHomeActivity extends Activity {
 

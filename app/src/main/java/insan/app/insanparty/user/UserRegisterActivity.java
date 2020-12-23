@@ -1,33 +1,45 @@
-package insan.app.insanparty.user;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
 
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-import insan.app.insanparty.R;
-import insan.app.insanparty.model.login.MDLogin;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.MemberListActivity;
+import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.member.MemberHomeActivity;
+import rehanfoundation.app.insanparty.member.MemberRegisterActivity;
+import rehanfoundation.app.insanparty.model.login.MDLogin;
+import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

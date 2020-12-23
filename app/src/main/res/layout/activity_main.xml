@@ -16,14 +16,7 @@
         android:src="@drawable/insanlogo"
         android:layout_centerHorizontal="true"/>
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:text="INSAN PARTY"-->
-<!--        android:textColor="#041785"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold" />-->
+
 
     <Button
         android:id="@+id/member"
@@ -41,7 +34,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Join as an User"
+        android:text="Join as a User"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"

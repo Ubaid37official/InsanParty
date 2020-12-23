@@ -1,6 +1,6 @@
-package insan.app.insanparty.model;
+package rehanfoundation.app.insanparty.model;
 
-import insan.app.insanparty.model.login.User;
+import rehanfoundation.app.insanparty.model.login.User;
 
 public class LoginResponse {
 

@@ -84,10 +84,18 @@
         android:background="@drawable/roundbutton"
         android:layout_gravity="center_horizontal"/>
 
-
-
-
-
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Tap here to Edit Profile"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:background="@drawable/roundbutton"
+        android:layout_gravity="center_horizontal"/>
 
 
 </LinearLayout>

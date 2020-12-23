@@ -1,4 +1,4 @@
-package insan.app.insanparty.user;
+package rehanfoundation.app.insanparty.user;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -14,11 +14,14 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import insan.app.insanparty.MemberListActivity;
-import insan.app.insanparty.R;
-import insan.app.insanparty.model.login.MDLogin;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.MainActivity;
+import rehanfoundation.app.insanparty.MemberListActivity;
+import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.model.login.MDLogin;
+import rehanfoundation.app.insanparty.model.login.User;
+import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -71,43 +74,43 @@ public class UserLoginActivity extends Activity {
             password.requestFocus();
             dialog.dismiss();
             return;
-        }
+        }else {
+            RetroServices service = RetrofitClientInstance.getApiClient().create(RetroServices.class);
+            Call<MDLogin> call = service.userLogin(email.getText().toString(), password.getText().toString());
+            call.enqueue(new Callback<MDLogin>() {
 
-        RetroServices service = RetrofitClientInstance.getApiClient().create(RetroServices.class);
-        Call<MDLogin> call = service.userLogin(email.getText().toString(), password.getText().toString());
-        call.enqueue(new Callback<MDLogin>() {
+                @Override
+                public void onResponse(Call<MDLogin> call, Response<MDLogin> response) {
+                    if (response.isSuccessful()){
+                        MDLogin mdRegister = response.body();
+                        boolean status = mdRegister.getStatus();
+                        String message = mdRegister.getMessage();
 
-            @Override
-            public void onResponse(Call<MDLogin> call, Response<MDLogin> response) {
-                if (response.isSuccessful()){
-                    MDLogin mdRegister = response.body();
-                    boolean status = mdRegister.getStatus();
-                    String message = mdRegister.getMessage();
+                        dialog.dismiss();
 
-                    dialog.dismiss();
-
-                    if (status == true){
+                        if (status == true){
 //                        startActivity(new Intent(UserLoginActivity.this, UserHomeActivity.class));
-                        SharedPreferences.Editor editor = getSharedPreferences("MY_PREFS_NAME", MODE_PRIVATE).edit();
-                        editor.putString("cat", "user");
-                        editor.putString("id", mdRegister.getUser().getId()+"");
-                        editor.apply();
-                        startActivity(new Intent(UserLoginActivity.this, MemberListActivity.class));
-                        finishAffinity();
-                    }
-                    if (status == false){
-                        Toast.makeText(UserLoginActivity.this, ""+ message, Toast.LENGTH_SHORT).show();
+                            SharedPreferences.Editor editor = getSharedPreferences("MY_PREFS_NAME", MODE_PRIVATE).edit();
+                            editor.putString("cat", "user");
+                            editor.putString("id", mdRegister.getUser().getId()+"");
+                            editor.apply();
+                            startActivity(new Intent(UserLoginActivity.this, MemberListActivity.class));
+                            finishAffinity();
+                        }
+                        if (status == false){
+                            Toast.makeText(UserLoginActivity.this, ""+ message, Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<MDLogin> call, Throwable t) {
+                @Override
+                public void onFailure(Call<MDLogin> call, Throwable t) {
 //                Toast.makeText(LoginActivity.this, "Fail", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-                Log.e("exception", t.toString());
-            }
-        });
+                    dialog.dismiss();
+                    Log.e("exception", t.toString());
+                }
+            });
+        }
     }
 
 

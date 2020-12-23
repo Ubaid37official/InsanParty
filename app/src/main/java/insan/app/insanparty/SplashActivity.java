@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
-import insan.app.insanparty.member.MemberHomeActivity;
+import rehanfoundation.app.insanparty.member.MemberHomeActivity;
+import rehanfoundation.app.insanparty.user.UserLoginActivity;
 
 
 public class SplashActivity extends Activity {

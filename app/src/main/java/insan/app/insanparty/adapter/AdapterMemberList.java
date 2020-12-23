@@ -1,4 +1,4 @@
-package insan.app.insanparty.adapter;
+package rehanfoundation.app.insanparty.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,15 +9,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import insan.app.insanparty.R;
-import insan.app.insanparty.UtilFunctions;
-import insan.app.insanparty.model.memberlist.MemberList;
+import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.UtilFunctions;
+import rehanfoundation.app.insanparty.model.memberlist.MemberList;
 
 public class AdapterMemberList extends RecyclerView.Adapter<AdapterMemberList.ViewHolder> {
 

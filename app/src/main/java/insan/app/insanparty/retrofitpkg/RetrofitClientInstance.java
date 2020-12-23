@@ -1,4 +1,4 @@
-package insan.app.insanparty.retrofitpkg;
+package rehanfoundation.app.insanparty.retrofitpkg;
 
 import android.util.Log;
 

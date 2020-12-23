@@ -1,4 +1,4 @@
-package insan.app.insanparty.volleyUtil;
+package rehanfoundation.app.insanparty.volleyUtil;
 
 public class Constants {
 

@@ -1,4 +1,4 @@
-package insan.app.insanparty.member;
+package rehanfoundation.app.insanparty.member;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -13,10 +13,17 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import insan.app.insanparty.R;
-import insan.app.insanparty.model.member_login.MDMemberLogin;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.MainActivity;
+import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.model.LoginResponse;
+import rehanfoundation.app.insanparty.model.Member;
+import rehanfoundation.app.insanparty.model.login.MDLogin;
+import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
+import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.user.UserHomeActivity;
+import rehanfoundation.app.insanparty.user.UserLoginActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

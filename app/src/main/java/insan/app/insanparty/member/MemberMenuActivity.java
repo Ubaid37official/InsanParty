@@ -1,4 +1,4 @@
-package insan.app.insanparty.member;
+package rehanfoundation.app.insanparty.member;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import insan.app.insanparty.R;
-import insan.app.insanparty.RegisterationForm;
+import rehanfoundation.app.insanparty.R;
+import rehanfoundation.app.insanparty.RegisterationForm;
 
 public class MemberMenuActivity extends Activity {
 

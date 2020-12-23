@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,9 +14,9 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import insan.app.insanparty.model.member_detail.MDMemberDetail;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.model.member_detail.MDMemberDetail;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -1,4 +1,4 @@
-package insan.app.insanparty.member;
+package rehanfoundation.app.insanparty.member;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import insan.app.insanparty.R;
+import rehanfoundation.app.insanparty.R;
 
 public class MemberActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -13,11 +13,11 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-import insan.app.insanparty.adapter.AdapterMemberList;
-import insan.app.insanparty.model.memberlist.MDMember;
-import insan.app.insanparty.model.memberlist.MemberList;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.adapter.AdapterMemberList;
+import rehanfoundation.app.insanparty.model.memberlist.MDMember;
+import rehanfoundation.app.insanparty.model.memberlist.MemberList;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

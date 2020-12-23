@@ -1,7 +1,8 @@
-package insan.app.insanparty.retrofitUtil;
+package rehanfoundation.app.insanparty.retrofitUtil;
 
-import insan.app.insanparty.model.Member;
-import insan.app.insanparty.model.login.User;
+import rehanfoundation.app.insanparty.model.Member;
+import rehanfoundation.app.insanparty.model.login.User;
+import rehanfoundation.app.insanparty.model.memberlist.MDMember;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;

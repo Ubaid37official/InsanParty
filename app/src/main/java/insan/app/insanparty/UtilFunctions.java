@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import android.app.Activity;
 import android.content.Context;

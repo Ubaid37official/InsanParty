@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,26 +10,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import insan.app.insanparty.model.profile.MDProfile;
-import insan.app.insanparty.retrofitpkg.RetroServices;
-import insan.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.model.member_detail.MDMemberDetail;
+import rehanfoundation.app.insanparty.model.profile.MDProfile;
+import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
+import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
+import rehanfoundation.app.insanparty.user.UserEditProfileActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MyActivity extends AppCompatActivity {
 
-    ImageView backImg;
+    ImageView backImg, imgEdit;
     TextView userName, gender, age, qualification, profession, etAddress, shadowMinister;
     Button btnLogout;
     CircleImageView profile_image;
 
     String user_id;
     private ProgressDialog dialog;
+
+    String image = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,7 @@ public class MyActivity extends AppCompatActivity {
         user_id = prefs.getString("id", ""); //0 is the default value.
 
         backImg = findViewById(R.id.backImg);
+        imgEdit = findViewById(R.id.imgEdit);
         btnLogout = findViewById(R.id.btnLogout);
         shadowMinister = findViewById(R.id.shadowMinister);
         etAddress = findViewById(R.id.etAddress);
@@ -59,6 +65,14 @@ public class MyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 onBackPressed();
                 finish();
+            }
+        });
+
+        imgEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyActivity.this, UserEditProfileActivity.class)
+                        .putExtra("image", image));
             }
         });
 
@@ -87,12 +101,15 @@ public class MyActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MDProfile> call, Response<MDProfile> response) {
                 if (response.isSuccessful()){
-                    dialog.dismiss();
                     MDProfile mdCourses = response.body();
                     boolean status = mdCourses.getStatus();
 
+                    dialog.dismiss();
+
                     if (status == true) {
                         if (mdCourses.getUser().getProfile() != null){
+                            image = mdCourses.getUser().getImage();
+
                             Picasso.with(MyActivity.this)
                                     .load(UtilFunctions.urlUser + mdCourses.getUser().getImage())
                                     .into(profile_image);

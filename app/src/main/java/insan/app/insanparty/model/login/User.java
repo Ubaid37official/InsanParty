@@ -1,4 +1,4 @@
-package insan.app.insanparty.model.login;
+package rehanfoundation.app.insanparty.model.login;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

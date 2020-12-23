@@ -1,4 +1,4 @@
-package insan.app.insanparty.volleyUtil;
+package rehanfoundation.app.insanparty.volleyUtil;
 
 import android.content.Context;
 

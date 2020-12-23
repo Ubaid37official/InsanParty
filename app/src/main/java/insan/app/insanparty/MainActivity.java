@@ -1,4 +1,4 @@
-package insan.app.insanparty;
+package rehanfoundation.app.insanparty;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import insan.app.insanparty.member.MemberActivity;
-import insan.app.insanparty.user.UserActivity;
+import rehanfoundation.app.insanparty.member.MemberActivity;
+import rehanfoundation.app.insanparty.user.UserActivity;
 
 public class MainActivity extends Activity {
 

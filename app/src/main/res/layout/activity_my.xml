@@ -41,10 +41,21 @@
                         android:id="@+id/profile_image"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:layout_margin="5dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/vector"
                         app:civ_border_color="@color/colorPrimary"
                         app:civ_border_width="1dp" />
+
+                    <ImageView
+                        android:id="@+id/imgEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        app:srcCompat="@drawable/ic_edit"
+                        android:padding="2dp"
+                        android:background="@drawable/round_camera_shape"
+                        app:tint="@color/colorPrimary" />
 
                 </RelativeLayout>
 

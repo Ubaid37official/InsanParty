@@ -1,15 +1,22 @@
-package insan.app.insanparty.retrofitpkg;
+package rehanfoundation.app.insanparty.retrofitpkg;
 
-import insan.app.insanparty.model.login.MDLogin;
-import insan.app.insanparty.model.member_detail.MDMemberDetail;
-import insan.app.insanparty.model.member_login.MDMemberLogin;
-import insan.app.insanparty.model.memberlist.MDMember;
-import insan.app.insanparty.model.profile.MDProfile;
+import okhttp3.MultipartBody;
+import rehanfoundation.app.insanparty.model.Member;
+import rehanfoundation.app.insanparty.model.login.MDLogin;
+import rehanfoundation.app.insanparty.model.login.User;
+import rehanfoundation.app.insanparty.model.member_detail.MDMemberDetail;
+import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
+import rehanfoundation.app.insanparty.model.memberlist.MDMember;
+import rehanfoundation.app.insanparty.model.profile.MDProfile;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Query;
 
 public interface RetroServices {
 
@@ -21,6 +28,21 @@ public interface RetroServices {
     Call<MDLogin> userLogin(
             @Field("email")String email,
             @Field("password") String password
+    );
+
+    @FormUrlEncoded
+    @Headers({
+            "Accept: application/json",
+            "X-Requested-With: XMLHttpRequest"})
+    @POST("user/update/profile")
+    Call<MDLogin> userUpdateProfile(
+            @Field("name")String name,
+            @Field("email")String email,
+            @Field("dob") String dob,
+            @Field("education")String education,
+            @Field("profession")String profession,
+            @Field("user_id")String user_id,
+            @Field("image")String image
     );
 
     @FormUrlEncoded
@@ -40,6 +62,24 @@ public interface RetroServices {
     @POST("user/member/detail")
     Call<MDMemberDetail> memberDetail(
             @Field("user_id")String user_id);
+
+    @FormUrlEncoded
+    @Headers({
+            "Accept: application/json",
+            "X-Requested-With: XMLHttpRequest"})
+    @POST("member/update/profile")
+    Call<MDLogin> memberUpdateProfile(
+            @Field("name")String name,
+            @Field("email")String email,
+            @Field("father_name")String father_name,
+            @Field("cnic")String cnic,
+            @Field("phone")String phone,
+            @Field("dob") String dob,
+            @Field("qualification") String qualification,
+            @Field("address")String address,
+            @Field("user_id")String user_id,
+            @Field("image")String image
+    );
 
     @FormUrlEncoded
     @Headers({
