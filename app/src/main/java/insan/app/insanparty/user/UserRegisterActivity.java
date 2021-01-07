@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty.user;
+package insan.app.insanparty.user;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -36,7 +36,7 @@ import rehanfoundation.app.insanparty.MemberListActivity;
 import rehanfoundation.app.insanparty.R;
 import rehanfoundation.app.insanparty.member.MemberHomeActivity;
 import rehanfoundation.app.insanparty.member.MemberRegisterActivity;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
 import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
 import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
@@ -161,7 +161,7 @@ public class UserRegisterActivity extends Activity {
 //                        editor.putString("cat", "user");
 //                        editor.putString("id", mdRegister.getUser().getId()+"");
 //                        editor.apply();
-                        startActivity(new Intent(UserRegisterActivity.this, UserLoginActivity.class));
+                        startActivity(new Intent(UserRegisterActivity.this, rehanfoundation.app.insanparty.user.UserLoginActivity.class));
                         finishAffinity();
                     }
                     if (status == false){

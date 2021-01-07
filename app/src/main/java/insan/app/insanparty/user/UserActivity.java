@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import insan.app.insanparty.user.UserRegisterActivity;
 import rehanfoundation.app.insanparty.R;
 
 public class UserActivity extends Activity {
@@ -25,7 +26,7 @@ public class UserActivity extends Activity {
         userLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), UserLoginActivity.class);
+                Intent intent = new Intent(UserActivity.this, rehanfoundation.app.insanparty.user.UserLoginActivity.class);
                 startActivity(intent);
             }
         });

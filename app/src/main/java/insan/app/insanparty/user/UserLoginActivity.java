@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import rehanfoundation.app.insanparty.MainActivity;
 import rehanfoundation.app.insanparty.MemberListActivity;
 import rehanfoundation.app.insanparty.R;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.model.login.User;
 import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
 import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;

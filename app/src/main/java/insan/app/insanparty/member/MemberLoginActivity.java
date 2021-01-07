@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty.member;
+package insan.app.insanparty.member;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -17,7 +17,7 @@ import rehanfoundation.app.insanparty.MainActivity;
 import rehanfoundation.app.insanparty.R;
 import rehanfoundation.app.insanparty.model.LoginResponse;
 import rehanfoundation.app.insanparty.model.Member;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
 import rehanfoundation.app.insanparty.retrofitUtil.RetrofitClient;
 import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
@@ -96,7 +96,7 @@ public class MemberLoginActivity extends Activity {
                     dialog.dismiss();
 
                     if (status == true){
-                        startActivity(new Intent(MemberLoginActivity.this, MemberHomeActivity.class));
+                        startActivity(new Intent(MemberLoginActivity.this, rehanfoundation.app.insanparty.member.MemberHomeActivity.class));
                     }
                     if (status == false){
                         Toast.makeText(MemberLoginActivity.this, ""+ message, Toast.LENGTH_SHORT).show();

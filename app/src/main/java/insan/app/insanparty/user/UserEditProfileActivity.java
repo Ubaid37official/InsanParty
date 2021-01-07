@@ -40,7 +40,7 @@ import rehanfoundation.app.insanparty.MyActivity;
 import rehanfoundation.app.insanparty.R;
 import rehanfoundation.app.insanparty.UtilFunctions;
 import rehanfoundation.app.insanparty.member.MemberEditProfileActivity;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
 import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import retrofit2.Call;

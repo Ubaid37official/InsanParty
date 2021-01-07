@@ -1,9 +1,7 @@
 package rehanfoundation.app.insanparty.retrofitpkg;
 
-import okhttp3.MultipartBody;
-import rehanfoundation.app.insanparty.model.Member;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
-import rehanfoundation.app.insanparty.model.login.User;
+import insan.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.model.member_detail.MDMemberDetail;
 import rehanfoundation.app.insanparty.model.member_login.MDMemberLogin;
 import rehanfoundation.app.insanparty.model.memberlist.MDMember;
@@ -11,12 +9,8 @@ import rehanfoundation.app.insanparty.model.profile.MDProfile;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.Headers;
-import retrofit2.http.Multipart;
 import retrofit2.http.POST;
-import retrofit2.http.Part;
-import retrofit2.http.Query;
 
 public interface RetroServices {
 

@@ -1,4 +1,4 @@
-package rehanfoundation.app.insanparty.model.login;
+package insan.app.insanparty.model.login;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -9,7 +9,7 @@ public class MDLogin {
     private Boolean status;
     @SerializedName("user")
     @Expose
-    private User user;
+    private rehanfoundation.app.insanparty.model.login.User user;
     @SerializedName("message")
     @Expose
     private String message;
@@ -22,11 +22,11 @@ public class MDLogin {
         this.status = status;
     }
 
-    public User getUser() {
+    public rehanfoundation.app.insanparty.model.login.User getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(rehanfoundation.app.insanparty.model.login.User user) {
         this.user = user;
     }
 

@@ -4,6 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8cf80c3361bf9537163e0124598d0eb7/jetified-stetho-1.5.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f721a7988e92a0dffed604366daa06a4/jetified-stetho-1.5.0/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea78ba268acf200db56916d71768f461/jetified-stetho-1.5.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/386f923cd6306275465843c356a372fd/jetified-stetho-1.5.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8cf80c3361bf9537163e0124598d0eb7/jetified-stetho-1.5.0/jars/classes.jar!/" />
@@ -16,6 +17,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea78ba268acf200db56916d71768f461/jetified-stetho-1.5.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea78ba268acf200db56916d71768f461/jetified-stetho-1.5.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ea78ba268acf200db56916d71768f461/jetified-stetho-1.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/386f923cd6306275465843c356a372fd/jetified-stetho-1.5.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/386f923cd6306275465843c356a372fd/jetified-stetho-1.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/386f923cd6306275465843c356a372fd/jetified-stetho-1.5.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.stetho/stetho/1.5.0/f71a39ff7c81bf08d5c500e5529355e5b4f7f49d/stetho-1.5.0-javadoc.jar!/" />

@@ -34,7 +34,7 @@ import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import rehanfoundation.app.insanparty.R;
-import rehanfoundation.app.insanparty.model.login.MDLogin;
+import insan.app.insanparty.model.login.MDLogin;
 import rehanfoundation.app.insanparty.retrofitpkg.RetroServices;
 import rehanfoundation.app.insanparty.retrofitpkg.RetrofitClientInstance;
 import rehanfoundation.app.insanparty.user.UserEditProfileActivity;
